@@ -190,7 +190,7 @@ class TechAndServices extends Component {
                     relativePath: { eq: "personal-projects/natours.png" }
                   ) {
                     childImageSharp {
-                      fluid(maxHeight: 500, maxWidth: 300) {
+                      fluid(maxHeight: 800, maxWidth: 500) {
                         ...GatsbyImageSharpFluid_tracedSVG
                       }
                     }
@@ -199,7 +199,7 @@ class TechAndServices extends Component {
                     relativePath: { eq: "personal-projects/devconnector.png" }
                   ) {
                     childImageSharp {
-                      fluid(maxHeight: 500, maxWidth: 300) {
+                      fluid(maxHeight: 800, maxWidth: 500) {
                         ...GatsbyImageSharpFluid_tracedSVG
                       }
                     }
@@ -208,7 +208,7 @@ class TechAndServices extends Component {
                     relativePath: { eq: "personal-projects/travelguide.png" }
                   ) {
                     childImageSharp {
-                      fluid(maxHeight: 500, maxWidth: 300) {
+                      fluid(maxHeight: 800, maxWidth: 500) {
                         ...GatsbyImageSharpFluid_tracedSVG
                       }
                     }

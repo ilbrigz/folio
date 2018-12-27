@@ -67,6 +67,7 @@ const StyledGallery = styled(Flex)`
   left: 0;
   margin-right: -320px;
   flex-wrap: wrap;
+  max-width: 42.5rem;
   @media (max-width: 1000px) {
     position: static;
     margin-right: 0;

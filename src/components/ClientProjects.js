@@ -18,6 +18,7 @@ const StyledWrapper = styled(Flex)`
 `;
 const StyledContentWrapper = styled(Flex)`
   height: 100%;
+  overflow: hidden;
   @media (max-width: 1000px) {
     flex-direction: column;
   }

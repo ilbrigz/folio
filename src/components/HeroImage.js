@@ -9,7 +9,7 @@ const HeroImage = props => (
         file(relativePath: { eq: "brayn.png" }) {
           childImageSharp {
             fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }

@@ -191,7 +191,7 @@ class TechAndServices extends Component {
                   ) {
                     childImageSharp {
                       fluid(maxHeight: 500, maxWidth: 300) {
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_tracedSVG
                       }
                     }
                   }
@@ -200,7 +200,7 @@ class TechAndServices extends Component {
                   ) {
                     childImageSharp {
                       fluid(maxHeight: 500, maxWidth: 300) {
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_tracedSVG
                       }
                     }
                   }
@@ -209,7 +209,7 @@ class TechAndServices extends Component {
                   ) {
                     childImageSharp {
                       fluid(maxHeight: 500, maxWidth: 300) {
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_tracedSVG
                       }
                     }
                   }
@@ -218,7 +218,7 @@ class TechAndServices extends Component {
                   ) {
                     childImageSharp {
                       fluid(maxWidth: 800) {
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_tracedSVG
                       }
                     }
                   }

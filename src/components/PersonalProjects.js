@@ -1,0 +1,305 @@
+import React, { Component } from "react";
+import { Flex, Hidden, Avatar, Heading, InlineFlex, styled } from "reakit";
+import { StaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
+import Waypoint from "react-waypoint";
+
+const StyledWrapper = styled(Flex)`
+  background: linear-gradient(
+    to right,
+    ${props => props.theme.colors.orange} 0%,
+    ${props => props.theme.colors.orange} 60%,
+    ${props => props.theme.colors.lightOrange} 60%,
+    ${props => props.theme.colors.lightOrange} 100%
+  );
+  @media (max-width: 600px) {
+    background-color: none;
+  }
+`;
+const StyledContentWrapper = styled(Flex)`
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+`;
+const StyledLeftContainer = styled(InlineFlex)`
+  padding: 5rem 4rem;
+  padding-right: calc(20% + 4rem);
+  background-color: ${props => props.theme.colors.orange};
+  @media (max-width: 1000px) {
+    padding: 2rem 4rem 0 4rem;
+    background-color: ${props => props.theme.colors.lightOrange};
+  }
+  @media (max-width: 600px) {
+    padding: 1rem 2rem 0 2rem;
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+`;
+const StyledRightContainer = styled(InlineFlex)`
+  padding: 5rem 4rem;
+  padding-right: 0;
+  }
+  background-color: ${props => props.theme.colors.lightOrange};
+  @media (max-width: 1000px) {
+    padding: 0 4rem 3rem 4rem;
+  }
+  /* @media (max-width: 400px) {
+    padding: 0 2rem 2rem 2rem;
+  } */
+`;
+
+const StyledGallery = styled(Flex)`
+  margin-left: -320px;
+  flex-wrap: wrap;
+  > div {
+    backface-visibility:hidden;
+    flex-basis: 150px;
+    flex-shrink: 1;
+    flex-grow: 1;
+  }
+  div:hover {
+   z-index: 10;
+
+  }
+  .gatsby-image-wrapper {
+    backface-visibility:hidden;
+    z-index: 0;
+    transition: all 200ms ease-out;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border: 2.5px solid ${props => props.theme.colors.lightBlue};
+    border-top: 5px solid ${props => props.theme.colors.lightBlue};
+    border-bottom: 5px solid ${props => props.theme.colors.lightBlue};
+  }
+  .gatsby-image-wrapper:hover {
+    transform:scale(1.1);
+    z-index: 10;
+    border: 5px solid ${props => props.theme.colors.lightBlue};
+  }
+  .gatsby-image-wrapper:first-child {
+    border-left: 5px solid ${props => props.theme.colors.lightBlue};
+  }
+  .gatsby-image-wrapper:last-child {
+    border-right: 5px solid ${props => props.theme.colors.lightBlue};
+  }
+  @media (max-width: 1000px) {
+    margin-left: 0;
+    justify-content: center;
+  }
+  @media (max-width: 750px) {
+    .gatsby-image-wrapper {
+      border: 2.5px solid ${props => props.theme.colors.lightBlue};
+      border-top: 5px solid ${props => props.theme.colors.lightBlue};
+      border-bottom: 2.5px solid ${props => props.theme.colors.lightBlue};
+    }
+    .gatsby-image-wrapper:last-child {
+      border-top: 2.5px solid ${props => props.theme.colors.lightBlue};
+      border-right: 5px solid ${props => props.theme.colors.lightBlue};
+      border-left: 5px solid ${props => props.theme.colors.lightBlue};
+      border-bottom: 5px solid ${props => props.theme.colors.lightBlue};
+    }
+    .gatsby-image-wrapper:nth-child(3) {
+      border-right: 5px solid ${props => props.theme.colors.lightBlue};
+    }
+  }
+  @media (max-width: 600px) {
+    .gatsby-image-wrapper {
+      border: 2.5px solid ${props => props.theme.colors.lightBlue};
+      border-top: 5px solid ${props => props.theme.colors.lightBlue};
+      border-bottom: 2.5px solid ${props => props.theme.colors.lightBlue};
+    }
+    .gatsby-image-wrapper:last-child {
+      border-top: 2.5px solid ${props => props.theme.colors.lightBlue};
+      border-right: 5px solid ${props => props.theme.colors.lightBlue};
+      border-left: 2.5px solid ${props => props.theme.colors.lightBlue};
+      border-bottom: 5px solid ${props => props.theme.colors.lightBlue};
+    }
+    .gatsby-image-wrapper:nth-child(2) {
+      border-right: 5px solid ${props => props.theme.colors.lightBlue};
+    }
+    .gatsby-image-wrapper:nth-child(3) {
+      border-top: 2.5px solid ${props => props.theme.colors.lightBlue};
+      border-right: 2.5px solid ${props => props.theme.colors.lightBlue};
+      border-left: 5px solid ${props => props.theme.colors.lightBlue};
+      border-bottom: 5px solid ${props => props.theme.colors.lightBlue};
+    }
+  }
+  @media (max-width: 435px) {
+   .gatsby-image-wrapper {
+      border-right: 5px solid ${props => props.theme.colors.lightBlue};
+      border-left: 5px solid ${props => props.theme.colors.lightBlue};
+      border-top: 2.5px solid ${props => props.theme.colors.lightBlue};
+      border-bottom: 2.5px solid ${props => props.theme.colors.lightBlue};
+    }
+    .gatsby-image-wrapper:first-child {
+      border-top: 5px solid ${props => props.theme.colors.lightBlue};
+    
+    }
+    .gatsby-image-wrapper:last-child {
+      border-bottom: 5px solid ${props => props.theme.colors.lightBlue};
+      border-left: 5px solid ${props => props.theme.colors.lightBlue};
+    
+    }
+    .gatsby-image-wrapper:nth-child(2) {
+      border-right: 5px solid ${props => props.theme.colors.lightBlue};
+    }
+    .gatsby-image-wrapper:nth-child(3) {
+      border-bottom: 2.5px solid ${props => props.theme.colors.lightBlue};
+      border-right: 5px solid ${props => props.theme.colors.lightBlue};
+      border-left: 5px solid ${props => props.theme.colors.lightBlue};
+    } */
+  }
+`;
+
+const StyledFlexWrap = styled(Flex)`
+  flex-wrap: wrap;
+`;
+class TechAndServices extends Component {
+  render() {
+    return (
+      <StyledWrapper>
+        <StyledContentWrapper
+          maxWidth="1200px"
+          flexShrink={1}
+          flexGrow={2}
+          margin="0 auto"
+        >
+          <StyledLeftContainer
+            flexGrow={1}
+            flexDirection="column"
+            minWidth="60%"
+          >
+            {" "}
+            <Heading as="h3" fontSize="1rem">
+              {" "}
+              Personal Projects
+            </Heading>
+            <p>
+              These websites were made for the purpose of learning the basics.
+              They are not in production.
+            </p>
+          </StyledLeftContainer>
+
+          <StyledRightContainer flexDirection="column" minWidth="40%">
+            <StaticQuery
+              query={graphql`
+                query {
+                  natour: file(
+                    relativePath: { eq: "personal-projects/natours.png" }
+                  ) {
+                    childImageSharp {
+                      fluid(maxHeight: 500, maxWidth: 300) {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
+                  devconnector: file(
+                    relativePath: { eq: "personal-projects/devconnector.png" }
+                  ) {
+                    childImageSharp {
+                      fluid(maxHeight: 500, maxWidth: 300) {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
+                  travelguide: file(
+                    relativePath: { eq: "personal-projects/travelguide.png" }
+                  ) {
+                    childImageSharp {
+                      fluid(maxHeight: 500, maxWidth: 300) {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
+                  trilloHotel: file(
+                    relativePath: { eq: "personal-projects/trilloHotel.png" }
+                  ) {
+                    childImageSharp {
+                      fluid(maxWidth: 800) {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
+                }
+              `}
+              render={data => (
+                <Hidden.Container>
+                  {({ visible, show }) => (
+                    <StyledGallery>
+                      <Waypoint
+                        onEnter={() => {
+                          show();
+                        }}
+                      />
+                      <Hidden
+                        visible={visible}
+                        unmount={false}
+                        fade
+                        duration="800ms"
+                      >
+                        <Img
+                          style={{
+                            height: "250px"
+                          }}
+                          fluid={data.natour.childImageSharp.fluid}
+                        />
+                      </Hidden>
+                      <Hidden
+                        visible={visible}
+                        unmount={false}
+                        fade
+                        delay="500ms"
+                        duration="1300ms"
+                      >
+                        <Img
+                          style={{
+                            height: "250px"
+                          }}
+                          fluid={data.devconnector.childImageSharp.fluid}
+                        />
+                      </Hidden>
+                      <Hidden
+                        visible={visible}
+                        unmount={false}
+                        fade
+                        delay="1200ms"
+                        duration="1500ms"
+                      >
+                        {" "}
+                        <Img
+                          style={{
+                            height: "250px"
+                          }}
+                          fluid={data.travelguide.childImageSharp.fluid}
+                        />
+                      </Hidden>
+                      <Hidden
+                        visible={visible}
+                        unmount={false}
+                        fade
+                        delay="1600ms"
+                        duration="1800ms"
+                      >
+                        {" "}
+                        <Img
+                          style={{
+                            height: "250px"
+                          }}
+                          fluid={data.trilloHotel.childImageSharp.fluid}
+                        />
+                      </Hidden>
+                    </StyledGallery>
+                  )}
+                </Hidden.Container>
+              )}
+            />
+          </StyledRightContainer>
+        </StyledContentWrapper>
+      </StyledWrapper>
+    );
+  }
+}
+
+export default TechAndServices;

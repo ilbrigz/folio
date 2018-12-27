@@ -239,12 +239,17 @@ class TechAndServices extends Component {
                         fade
                         duration="800ms"
                       >
-                        <Img
-                          style={{
-                            height: "250px"
-                          }}
-                          fluid={data.natour.childImageSharp.fluid}
-                        />
+                        <a
+                          href="https://ilbrigz.github.io/advance-sass-and-css/"
+                          alt="natour outdoor site"
+                        >
+                          <Img
+                            style={{
+                              height: "250px"
+                            }}
+                            fluid={data.natour.childImageSharp.fluid}
+                          />
+                        </a>
                       </Hidden>
                       <Hidden
                         visible={visible}
@@ -253,12 +258,18 @@ class TechAndServices extends Component {
                         delay="500ms"
                         duration="1300ms"
                       >
-                        <Img
-                          style={{
-                            height: "250px"
-                          }}
-                          fluid={data.devconnector.childImageSharp.fluid}
-                        />
+                        <a
+                          href="https://fast-ravine-32891.herokuapp.com/"
+                          alt="devconnector"
+                        >
+                          {" "}
+                          <Img
+                            style={{
+                              height: "250px"
+                            }}
+                            fluid={data.devconnector.childImageSharp.fluid}
+                          />
+                        </a>
                       </Hidden>
                       <Hidden
                         visible={visible}
@@ -267,13 +278,17 @@ class TechAndServices extends Component {
                         delay="1200ms"
                         duration="1500ms"
                       >
-                        {" "}
-                        <Img
-                          style={{
-                            height: "250px"
-                          }}
-                          fluid={data.travelguide.childImageSharp.fluid}
-                        />
+                        <a
+                          href="https://ilbrigz.github.io/travel-site/"
+                          alt="travel site"
+                        >
+                          <Img
+                            style={{
+                              height: "250px"
+                            }}
+                            fluid={data.travelguide.childImageSharp.fluid}
+                          />
+                        </a>
                       </Hidden>
                       <Hidden
                         visible={visible}
@@ -282,13 +297,17 @@ class TechAndServices extends Component {
                         delay="1600ms"
                         duration="1800ms"
                       >
-                        {" "}
-                        <Img
-                          style={{
-                            height: "250px"
-                          }}
-                          fluid={data.trilloHotel.childImageSharp.fluid}
-                        />
+                        <a
+                          href="https://ilbrigz.github.io/trillo_flexbox/"
+                          alt="trello site"
+                        >
+                          <Img
+                            style={{
+                              height: "250px"
+                            }}
+                            fluid={data.trilloHotel.childImageSharp.fluid}
+                          />
+                        </a>
                       </Hidden>
                     </StyledGallery>
                   )}

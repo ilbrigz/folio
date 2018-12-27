@@ -1,5 +1,8 @@
 import React, { Component } from "react";
-import { Flex, Heading, InlineFlex, styled } from "reakit";
+import { Flex, Hidden, Heading, InlineFlex, styled } from "reakit";
+import { StaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
+import Waypoint from "react-waypoint";
 
 const StyledWrapper = styled(Flex)`
   background: linear-gradient(
@@ -18,6 +21,7 @@ const StyledContentWrapper = styled(Flex)`
     flex-direction: column;
   }
 `;
+
 const StyledLeftContainer = styled(InlineFlex)`
   position: relative;
   padding: 5rem 4rem;
@@ -59,12 +63,35 @@ const StyledRightContainer = styled(InlineFlex)`
 
 const StyledGallery = styled(Flex)`
   position: absolute;
+  right: 0;
+  left: 0;
   margin-right: -320px;
   flex-wrap: wrap;
   @media (max-width: 1000px) {
     position: static;
     margin-right: 0;
     justify-content: center;
+  }
+  > div {
+    backface-visibility: hidden;
+    flex-basis: 150px;
+    flex-shrink: 1;
+    flex-grow: 1;
+  }
+  div:hover {
+    z-index: 10;
+  }
+  .gatsby-image-wrapper {
+    backface-visibility: hidden;
+    z-index: 0;
+    transition: all 200ms ease-out;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+  }
+  .gatsby-image-wrapper:hover {
+    transform: scale(1.1);
+    z-index: 10;
   }
 `;
 
@@ -87,25 +114,118 @@ class ClientProjects extends Component {
             flexDirection="column"
             minWidth="40%"
           >
-            <StyledGallery>
-              {" "}
-              <img
-                src="https://via.placeholder.com/250/7870ac/000000?Text=First+3+clients+will+be+free"
-                alt=""
-              />
-              <img
-                src="https://via.placeholder.com/250/7870ac/000000?Text=First+3+clients+will+be+free"
-                alt=""
-              />{" "}
-              <img
-                src="https://via.placeholder.com/250/7870ac/000000?Text=First+3+clients+will+be+free"
-                alt=""
-              />{" "}
-              <img
-                src="https://via.placeholder.com/250/7870ac/000000?Text=First+3+clients+will+be+free"
-                alt=""
-              />
-            </StyledGallery>
+            <StaticQuery
+              query={graphql`
+                query {
+                  natour: file(
+                    relativePath: { eq: "clientProjects/first.jpg" }
+                  ) {
+                    childImageSharp {
+                      fluid(maxHeight: 500, maxWidth: 300) {
+                        ...GatsbyImageSharpFluid_tracedSVG
+                      }
+                    }
+                  }
+                  devconnector: file(
+                    relativePath: { eq: "clientProjects/second.jpg" }
+                  ) {
+                    childImageSharp {
+                      fluid(maxHeight: 500, maxWidth: 300) {
+                        ...GatsbyImageSharpFluid_tracedSVG
+                      }
+                    }
+                  }
+                  travelguide: file(
+                    relativePath: { eq: "clientProjects/third.jpg" }
+                  ) {
+                    childImageSharp {
+                      fluid(maxHeight: 500, maxWidth: 300) {
+                        ...GatsbyImageSharpFluid_tracedSVG
+                      }
+                    }
+                  }
+                  trilloHotel: file(
+                    relativePath: { eq: "clientProjects/fourth.jpg" }
+                  ) {
+                    childImageSharp {
+                      fluid(maxWidth: 800) {
+                        ...GatsbyImageSharpFluid_tracedSVG
+                      }
+                    }
+                  }
+                }
+              `}
+              render={data => (
+                <Hidden.Container>
+                  {({ visible, show }) => (
+                    <StyledGallery>
+                      <Waypoint
+                        onEnter={() => {
+                          show();
+                        }}
+                      />
+                      <Hidden
+                        visible={visible}
+                        unmount={false}
+                        fade
+                        duration="800ms"
+                      >
+                        <Img
+                          style={{
+                            height: "250px"
+                          }}
+                          fluid={data.natour.childImageSharp.fluid}
+                        />
+                      </Hidden>
+                      <Hidden
+                        visible={visible}
+                        unmount={false}
+                        fade
+                        delay="500ms"
+                        duration="1300ms"
+                      >
+                        <Img
+                          style={{
+                            height: "250px"
+                          }}
+                          fluid={data.devconnector.childImageSharp.fluid}
+                        />
+                      </Hidden>
+                      <Hidden
+                        visible={visible}
+                        unmount={false}
+                        fade
+                        delay="1200ms"
+                        duration="1500ms"
+                      >
+                        {" "}
+                        <Img
+                          style={{
+                            height: "250px"
+                          }}
+                          fluid={data.travelguide.childImageSharp.fluid}
+                        />
+                      </Hidden>
+                      <Hidden
+                        visible={visible}
+                        unmount={false}
+                        fade
+                        delay="1600ms"
+                        duration="1800ms"
+                      >
+                        {" "}
+                        <Img
+                          style={{
+                            height: "250px"
+                          }}
+                          fluid={data.trilloHotel.childImageSharp.fluid}
+                        />
+                      </Hidden>
+                    </StyledGallery>
+                  )}
+                </Hidden.Container>
+              )}
+            />
           </StyledLeftContainer>
 
           <StyledRightContainer flexDirection="column" minWidth="60%">

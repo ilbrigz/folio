@@ -6,7 +6,7 @@ import TechAndServices from "../components/TechAndServices";
 import PersonalProjects from "../components/PersonalProjects.js";
 import ClientProjects from "../components/ClientProjects";
 
-export default () => (
+const Index = () => (
   <Layout>
     <Header />
     <Hero />
@@ -20,3 +20,5 @@ export default () => (
     </form>
   </Layout>
 );
+
+export default Index;

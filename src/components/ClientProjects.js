@@ -255,6 +255,7 @@ class ClientProjects extends Component {
                       <Hidden
                         visible={visible}
                         unmount={false}
+                        slide="left"
                         fade
                         duration="800ms"
                       >
@@ -268,9 +269,10 @@ class ClientProjects extends Component {
                       <Hidden
                         visible={visible}
                         unmount={false}
+                        slide="left"
                         fade
                         delay="500ms"
-                        duration="1300ms"
+                        duration="800ms"
                       >
                         <Img
                           style={{
@@ -282,9 +284,10 @@ class ClientProjects extends Component {
                       <Hidden
                         visible={visible}
                         unmount={false}
+                        slide="left"
                         fade
                         delay="1200ms"
-                        duration="1500ms"
+                        duration="800ms"
                       >
                         {" "}
                         <Img
@@ -297,9 +300,10 @@ class ClientProjects extends Component {
                       <Hidden
                         visible={visible}
                         unmount={false}
+                        slide="left"
                         fade
                         delay="1600ms"
-                        duration="1800ms"
+                        duration="1000ms"
                       >
                         {" "}
                         <Img

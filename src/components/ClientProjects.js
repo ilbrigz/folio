@@ -67,7 +67,16 @@ const StyledGallery = styled(Flex)`
   left: 0;
   margin-right: -320px;
   flex-wrap: wrap;
-  max-width: 42.5rem;
+  max-width: 36rem ;
+  > div {
+    backface-visibility: hidden;
+    flex-basis: 150px;
+    flex-shrink: 1;
+    flex-grow: 1;
+  }
+  div:hover {
+    z-index: 10;
+  }
   @media (max-width: 1000px) {
     position: static;
     margin-right: 0;
@@ -89,10 +98,88 @@ const StyledGallery = styled(Flex)`
     cursor: pointer;
     width: 100%;
     height: 100%;
+    border: 2.5px solid ${props => props.theme.colors.lightBlue};
+    border-top: 5px solid ${props => props.theme.colors.lightBlue};
+    border-bottom: 5px solid ${props => props.theme.colors.lightBlue};
   }
   .gatsby-image-wrapper:hover {
-    transform: scale(1.1);
+    transform:scale(1.1);
     z-index: 10;
+    border: 5px solid ${props => props.theme.colors.lightBlue};
+  }
+  .gatsby-image-wrapper:first-child {
+    border-left: 5px solid ${props => props.theme.colors.lightBlue};
+  }
+  .gatsby-image-wrapper:last-child {
+    border-right: 5px solid ${props => props.theme.colors.lightBlue};
+  }
+  @media (max-width: 1000px) {
+    margin-left: 0;
+    justify-content: center;
+    max-width: 1000rem ;
+  }
+  @media (max-width: 750px) {
+    .gatsby-image-wrapper {
+      border: 2.5px solid ${props => props.theme.colors.lightBlue};
+      border-top: 5px solid ${props => props.theme.colors.lightBlue};
+      border-bottom: 2.5px solid ${props => props.theme.colors.lightBlue};
+    }
+    .gatsby-image-wrapper:last-child {
+      border-top: 2.5px solid ${props => props.theme.colors.lightBlue};
+      border-right: 5px solid ${props => props.theme.colors.lightBlue};
+      border-left: 5px solid ${props => props.theme.colors.lightBlue};
+      border-bottom: 5px solid ${props => props.theme.colors.lightBlue};
+    }
+    .gatsby-image-wrapper:nth-child(3) {
+      border-right: 5px solid ${props => props.theme.colors.lightBlue};
+    }
+  }
+  @media (max-width: 600px) {
+    .gatsby-image-wrapper {
+      border: 2.5px solid ${props => props.theme.colors.lightBlue};
+      border-top: 5px solid ${props => props.theme.colors.lightBlue};
+      border-bottom: 2.5px solid ${props => props.theme.colors.lightBlue};
+    }
+    .gatsby-image-wrapper:last-child {
+      border-top: 2.5px solid ${props => props.theme.colors.lightBlue};
+      border-right: 5px solid ${props => props.theme.colors.lightBlue};
+      border-left: 2.5px solid ${props => props.theme.colors.lightBlue};
+      border-bottom: 5px solid ${props => props.theme.colors.lightBlue};
+    }
+    .gatsby-image-wrapper:nth-child(2) {
+      border-right: 5px solid ${props => props.theme.colors.lightBlue};
+    }
+    .gatsby-image-wrapper:nth-child(3) {
+      border-top: 2.5px solid ${props => props.theme.colors.lightBlue};
+      border-right: 2.5px solid ${props => props.theme.colors.lightBlue};
+      border-left: 5px solid ${props => props.theme.colors.lightBlue};
+      border-bottom: 5px solid ${props => props.theme.colors.lightBlue};
+    }
+  }
+  @media (max-width: 435px) {
+   .gatsby-image-wrapper {
+      border-right: 5px solid ${props => props.theme.colors.lightBlue};
+      border-left: 5px solid ${props => props.theme.colors.lightBlue};
+      border-top: 2.5px solid ${props => props.theme.colors.lightBlue};
+      border-bottom: 2.5px solid ${props => props.theme.colors.lightBlue};
+    }
+    .gatsby-image-wrapper:first-child {
+      border-top: 5px solid ${props => props.theme.colors.lightBlue};
+    
+    }
+    .gatsby-image-wrapper:last-child {
+      border-bottom: 5px solid ${props => props.theme.colors.lightBlue};
+      border-left: 5px solid ${props => props.theme.colors.lightBlue};
+    
+    }
+    .gatsby-image-wrapper:nth-child(2) {
+      border-right: 5px solid ${props => props.theme.colors.lightBlue};
+    }
+    .gatsby-image-wrapper:nth-child(3) {
+      border-bottom: 2.5px solid ${props => props.theme.colors.lightBlue};
+      border-right: 5px solid ${props => props.theme.colors.lightBlue};
+      border-left: 5px solid ${props => props.theme.colors.lightBlue};
+    } */
   }
 `;
 

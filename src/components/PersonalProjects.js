@@ -237,7 +237,7 @@ class TechAndServices extends Component {
                         visible={visible}
                         unmount={false}
                         fade
-                        duration="800ms"
+                        duration="600ms"
                       >
                         <a
                           href="https://ilbrigz.github.io/advance-sass-and-css/"
@@ -255,8 +255,8 @@ class TechAndServices extends Component {
                         visible={visible}
                         unmount={false}
                         fade
-                        delay="500ms"
-                        duration="1300ms"
+                        delay="600ms"
+                        duration="600ms"
                       >
                         <a
                           href="https://fast-ravine-32891.herokuapp.com/"
@@ -276,7 +276,7 @@ class TechAndServices extends Component {
                         unmount={false}
                         fade
                         delay="1200ms"
-                        duration="1500ms"
+                        duration="600ms"
                       >
                         <a
                           href="https://ilbrigz.github.io/travel-site/"
@@ -294,8 +294,8 @@ class TechAndServices extends Component {
                         visible={visible}
                         unmount={false}
                         fade
-                        delay="1600ms"
-                        duration="1800ms"
+                        delay="1500ms"
+                        duration="600ms"
                       >
                         <a
                           href="https://ilbrigz.github.io/trillo_flexbox/"

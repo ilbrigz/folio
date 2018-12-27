@@ -5,6 +5,7 @@ import Hero from "../components/Hero";
 import TechAndServices from "../components/TechAndServices";
 import PersonalProjects from "../components/PersonalProjects.js";
 import ClientProjects from "../components/ClientProjects";
+import Contact from "../components/Contact";
 
 const Index = () => (
   <Layout>
@@ -18,6 +19,7 @@ const Index = () => (
       <input type="email" name="_replyto" />
       <input type="submit" value="Send" />
     </form>
+    <Contact />
   </Layout>
 );
 

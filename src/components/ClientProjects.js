@@ -44,7 +44,7 @@ const StyledLeftContainer = styled(InlineFlex)`
   }
 `;
 const StyledRightContainer = styled(InlineFlex)`
-  padding: 5rem 4rem 5rem 15rem;
+  padding: 5rem 4rem 5rem 18rem;
 
   }
   background-color: ${props => props.theme.colors.green};
@@ -67,7 +67,8 @@ const StyledGallery = styled(Flex)`
   left: 0;
   margin-right: -320px;
   flex-wrap: wrap;
-  max-width: 36rem ;
+  max-width: 37rem ;
+  padding-left: 1rem;
   > div {
     backface-visibility: hidden;
     flex-basis: 150px;
@@ -117,6 +118,7 @@ const StyledGallery = styled(Flex)`
     margin-left: 0;
     justify-content: center;
     max-width: 1000rem ;
+    padding-left: 0;
   }
   @media (max-width: 750px) {
     .gatsby-image-wrapper {
@@ -257,7 +259,7 @@ class ClientProjects extends Component {
                         unmount={false}
                         slide="left"
                         fade
-                        duration="800ms"
+                        duration="600ms"
                       >
                         <Img
                           style={{
@@ -272,7 +274,7 @@ class ClientProjects extends Component {
                         slide="left"
                         fade
                         delay="500ms"
-                        duration="800ms"
+                        duration="600ms"
                       >
                         <Img
                           style={{
@@ -287,7 +289,7 @@ class ClientProjects extends Component {
                         slide="left"
                         fade
                         delay="1200ms"
-                        duration="800ms"
+                        duration="600ms"
                       >
                         {" "}
                         <Img
@@ -303,7 +305,7 @@ class ClientProjects extends Component {
                         slide="left"
                         fade
                         delay="1600ms"
-                        duration="1000ms"
+                        duration="600ms"
                       >
                         {" "}
                         <Img

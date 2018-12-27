@@ -83,6 +83,14 @@ const StyledBackground = styled(Box)`
   background-color: ${props => props.theme.colors.darkestBlue};
 `;
 
+const LightOrangeSpan = styled.span`
+  color: ${props => props.theme.colors.lightOrange};
+`;
+
+const LightBlueSpan = styled.span`
+  color: ${props => props.theme.colors.lightBlue};
+`;
+
 class Hero extends React.Component {
   render() {
     return (
@@ -137,7 +145,9 @@ class Hero extends React.Component {
                       fontWeight="500"
                       marginTop="-.5rem"
                     >
-                      I build beautiful modern websites that speed past the
+                      I build beautiful{" "}
+                      <LightOrangeSpan>modern websites</LightOrangeSpan> that
+                      <LightBlueSpan> speed</LightBlueSpan> past the
                       competitions.
                     </Heading>
                   </Hidden>

@@ -14,12 +14,12 @@ const Index = () => (
     <TechAndServices />
     <PersonalProjects />
     <ClientProjects />
-    <form method="POST" action="https://formspree.io/braynbrigoli24@gmail.com">
-      <input type="text" name="name" />>
-      <input type="email" name="_replyto" />
-      <input type="submit" value="Send" />
-    </form>
     <Contact />
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae officiis,
+      fugit repellendus accusamus fuga voluptatum cupiditate ut hic neque in
+      debitis eum ipsa consequuntur? Mollitia magni sit autem impedit a.
+    </p>
   </Layout>
 );
 

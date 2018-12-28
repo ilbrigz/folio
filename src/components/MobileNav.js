@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Overlay, Divider, List, styled, Backdrop } from "reakit";
 import { CollapseReverse } from "react-burgers";
+import { Link } from "gatsby";
 
 const StyledOverlayShow = styled(Overlay.Show)`
   & {
@@ -14,8 +15,10 @@ const StyledList = styled(List)`
   &&&& {
     li {
       padding: 1rem 2rem;
+
       a {
         text-transform: uppercase;
+        color: black;
       }
     }
   }
@@ -31,7 +34,9 @@ const MobileNav = props => (
               width={30}
               color="white"
               onClick={() => props.openNav()}
-              style={{ color: "white" }}
+              style={{
+                color: "white"
+              }}
               active={props.isOpen}
             />
           </StyledOverlayShow>
@@ -54,15 +59,27 @@ const MobileNav = props => (
             <StyledList>
               <Divider />
               <li>
-                <Box as="a">home</Box>
+                <Link
+                  style={{ backgroundImage: "none" }}
+                  to="/"
+                  activeStyle={{
+                    color: "#1ca086"
+                  }}
+                >
+                  home
+                </Link>
               </li>
               <Divider />
               <li>
-                <Box as="a">projects</Box>
+                <Link style={{ backgroundImage: "none" }} to="/#projects">
+                  project
+                </Link>
               </li>
               <Divider />
               <li>
-                <Box as="a">contacts</Box>
+                <Link style={{ backgroundImage: "none" }} to="/#contact">
+                  contacts
+                </Link>
               </li>
               <Divider />
             </StyledList>

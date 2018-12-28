@@ -6,21 +6,24 @@ import TechAndServices from "../components/TechAndServices";
 import PersonalProjects from "../components/PersonalProjects.js";
 import ClientProjects from "../components/ClientProjects";
 import Contact from "../components/Contact";
+import AboutMe from "../components/AboutMe";
+import Footer from "../components/Footer";
 
-const Index = () => (
-  <Layout>
-    <Header />
-    <Hero />
-    <TechAndServices />
-    <PersonalProjects />
-    <ClientProjects />
-    <Contact />
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae officiis,
-      fugit repellendus accusamus fuga voluptatum cupiditate ut hic neque in
-      debitis eum ipsa consequuntur? Mollitia magni sit autem impedit a.
-    </p>
-  </Layout>
-);
+class Index extends React.Component {
+  render() {
+    return (
+      <Layout>
+        <Header />
+        <Hero />
+        <TechAndServices />
+        <PersonalProjects />
+        <ClientProjects />
+        <AboutMe />
+        <Contact />
+        <Footer />
+      </Layout>
+    );
+  }
+}
 
 export default Index;

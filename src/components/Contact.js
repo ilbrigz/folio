@@ -1,28 +1,37 @@
 import React from "react";
 import { styled, Flex } from "reakit";
 
-const StyledHero = styled(Flex)`
-  z-index: 99 !important;
-  padding-top: 3rem !important;
-  margin-top: -3px !important;
+const StyledDiv = styled.div`
   background-color: ${props => props.theme.colors.darkestBlue};
-  @media (max-width: 950px) {
-    flex-direction: column;
-    padding-top: 1rem;
+`;
+const StyledContent = styled(Flex)`
+  max-width: 1200px;
+  margin: 0 auto;
+  > h3 {
+    margin: 0;
+  }
+  padding: 5rem 4rem;
+  @media (max-width: 1000px) {
+    padding: 2rem 4rem;
+  }
+  @media (max-width: 600px) {
+    padding: 2rem 2rem;
   }
 `;
 export default function Contact() {
   return (
-    <StyledHero>
-      {" "}
-      <form
-        method="POST"
-        action="https://formspree.io/braynbrigoli24@gmail.com"
-      >
-        <input type="text" name="name" />>
-        <input type="email" name="_replyto" />
-        <input type="submit" value="Send" />
-      </form>
-    </StyledHero>
+    <StyledDiv id="contact">
+      <StyledContent>
+        {" "}
+        <form
+          method="POST"
+          action="https://formspree.io/braynbrigoli24@gmail.com"
+        >
+          <input type="text" name="name" />>
+          <input type="email" name="_replyto" />
+          <input type="submit" value="Send" />
+        </form>
+      </StyledContent>
+    </StyledDiv>
   );
 }

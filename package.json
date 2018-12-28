@@ -25,6 +25,7 @@
     "react-dom": "^16.5.1",
     "react-media": "^1.9.2",
     "react-responsive": "^6.0.1",
+    "react-scroll-to": "^2.0.2",
     "react-typography": "^0.16.18",
     "react-waypoint": "^8.1.0",
     "reakit": "^0.15.13",

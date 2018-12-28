@@ -16,7 +16,6 @@ const HeroImage = props => (
       }
     `}
     render={data => {
-      console.log(data);
       return (
         <Img
           style={{ borderRadius: "5px 5px 0 0" }}

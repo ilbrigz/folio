@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import Waypoint from "react-waypoint";
 
-const StyledWrapper = styled(Flex)`
+const StyledDiv = styled.div`
   background: linear-gradient(
     to right,
     ${props => props.theme.colors.orange} 0%,
@@ -30,7 +30,7 @@ const StyledLeftContainer = styled(InlineFlex)`
     background-color: ${props => props.theme.colors.lightOrange};
   }
   @media (max-width: 600px) {
-    padding: 1rem 2rem 0 2rem;
+    padding: 2rem 2rem 0 2rem;
     p {
       margin-bottom: 1rem;
     }
@@ -159,7 +159,7 @@ const StyledFlexWrap = styled(Flex)`
 class TechAndServices extends Component {
   render() {
     return (
-      <StyledWrapper>
+      <StyledDiv id="projects">
         <StyledContentWrapper
           maxWidth="1200px"
           flexShrink={1}
@@ -316,7 +316,7 @@ class TechAndServices extends Component {
             />
           </StyledRightContainer>
         </StyledContentWrapper>
-      </StyledWrapper>
+      </StyledDiv>
     );
   }
 }

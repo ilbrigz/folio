@@ -1,7 +1,14 @@
 import React from "react";
-import { Box, Provider, styled } from "reakit";
+import { Box, Provider, styled, injectGlobal } from "reakit";
 import defaultTheme from "reakit-theme-default";
-import "../global.css";
+
+injectGlobal`
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+`;
 
 const StyledApp = styled(Box)`
   color: ${props => props.theme.colors.white};

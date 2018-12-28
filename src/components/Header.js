@@ -90,11 +90,29 @@ class Header extends Component {
                 home
               </Link>
             </StyledLink>
-            <StyledLink as="a" href="#projects">
-              projects
+            <StyledLink as="span">
+              <Link
+                to="/#projects"
+                style={{
+                  textDecoration: "none",
+                  backgroundImage: "none",
+                  textShadow: "none"
+                }}
+              >
+                projects
+              </Link>
             </StyledLink>
-            <StyledLink as="a" href="#contact">
-              contacts
+            <StyledLink as="span">
+              <Link
+                to="/#contact"
+                style={{
+                  textDecoration: "none",
+                  backgroundImage: "none",
+                  textShadow: "none"
+                }}
+              >
+                contacts
+              </Link>
             </StyledLink>
           </MediaQuery>
         </StyledMenu>

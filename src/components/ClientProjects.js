@@ -26,7 +26,7 @@ const StyledContentWrapper = styled(Flex)`
 
 const StyledLeftContainer = styled(InlineFlex)`
   position: relative;
-  max-height: 455px;
+  max-height: 460px;
   padding: 5rem 4rem;
   padding-right: calc(20% + 4rem);
   background-color: ${props => props.theme.colors.lightViolet};
@@ -185,9 +185,6 @@ const StyledGallery = styled(Flex)`
   }
 `;
 
-const StyledFlexWrap = styled(Flex)`
-  flex-wrap: wrap;
-`;
 class ClientProjects extends Component {
   render() {
     return (
@@ -327,12 +324,9 @@ class ClientProjects extends Component {
             {" "}
             <Heading as="h3" fontSize="1rem">
               {" "}
-              Personal Projects
+              Cliet's Project
             </Heading>
-            <p>
-              These websites were made for the purpose of learning the basics.
-              They are not in production.
-            </p>
+            <p>Ganna be accepting work soon.</p>
           </StyledRightContainer>
         </StyledContentWrapper>
       </StyledWrapper>

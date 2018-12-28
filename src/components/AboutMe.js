@@ -29,9 +29,9 @@ export default function AboutMe() {
         <p>
           Hi! I am Brayn. I am a self-taught programmer. I first tried coding
           two years ago. Since then, I fell inlove and been learning and
-          teaching myself how to code. I had know photoshop and was into drawing
-          and design before that. I am self-motivated person and am always
-          willing to learn new things.
+          teaching myself how to code. I had known photoshop and was into
+          drawing and design before that. I am self-motivated person and am
+          always willing to learn new things.
         </p>
 
         <p>To know more about me, please check out my blog page.</p>

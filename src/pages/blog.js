@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-export default class blog extends Component {
+export default class NotFound extends Component {
   render() {
     return (
       <Layout>

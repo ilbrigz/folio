@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Flex, Hidden, Avatar, Heading, InlineFlex, styled } from "reakit";
+import { Flex, Hidden, Heading, InlineFlex, styled } from "reakit";
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import Waypoint from "react-waypoint";

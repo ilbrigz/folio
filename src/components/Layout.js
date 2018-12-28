@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Provider, styled, injectGlobal } from "reakit";
 import defaultTheme from "reakit-theme-default";
+import SEO from "../components/SEO";
 
 injectGlobal`
 * {
@@ -19,7 +20,7 @@ const theme = {
   colors: {
     white: "#ffffff",
     darkestBlue: "#22263c",
-    darkBlue: "#272b42",
+    darkBlue: "#282c43",
     violet: "#7870ac",
     lightBlue: "#6cb4cc",
     lightOrange: "#d4a782",
@@ -33,6 +34,7 @@ const theme = {
 const Layout = props => (
   <Provider theme={theme}>
     <StyledApp height="100vh" width="100vw">
+      <SEO />
       {props.children}
     </StyledApp>
   </Provider>

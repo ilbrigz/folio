@@ -1,6 +1,15 @@
 const path = require(`path`);
+const config = require("./config/website");
+
+const pathPrefix = config.pathPrefix === "/" ? "" : config.pathPrefix;
+
 module.exports = {
+  pathPrefix: config.pathPrefix,
+  siteMetadata: {
+    siteUrl: config.siteUrl + pathPrefix
+  },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-typography`,

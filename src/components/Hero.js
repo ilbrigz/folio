@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Hidden, Heading, as, Flex, styled } from "reakit";
+import { Box, Hidden, Heading, Flex, styled } from "reakit";
 import Waypoint from "react-waypoint";
 import HeroImage from "./HeroImage.js";
 

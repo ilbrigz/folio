@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { as, Button, Heading, InlineFlex, Flex, Box, styled } from "reakit";
+import { as, Button, InlineFlex, Flex, Box, styled } from "reakit";
 import MediaQuery from "react-responsive";
 import MobileNav from "./MobileNav";
 import { Link } from "gatsby";

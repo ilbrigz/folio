@@ -1,5 +1,5 @@
 import React from "react";
-import { styled, Box } from "reakit";
+import { styled } from "reakit";
 
 const StyledDiv = styled.div`
   background-color: ${props => props.theme.colors.darkBlue};

@@ -53,109 +53,99 @@ const StyledGallery = styled(Flex)`
   margin-left: -320px;
   flex-wrap: wrap;
   > div {
-    backface-visibility:hidden;
+    backface-visibility: hidden;
     flex-basis: 150px;
     flex-shrink: 1;
     flex-grow: 1;
   }
   div:hover {
-   z-index: 10;
-
+    z-index: 10;
   }
+  @media (max-width: 1000px) {
+    margin-left: 0;
+    justify-content: center;
+  }
+
   .gatsby-image-wrapper {
-    backface-visibility:hidden;
+    backface-visibility: hidden;
     z-index: 0;
     transition: all 200ms ease-out;
     cursor: pointer;
     width: 100%;
     height: 100%;
     border: 2.5px solid ${props => props.theme.colors.lightBlue};
-    border-top: 5px solid ${props => props.theme.colors.lightBlue};
-    border-bottom: 5px solid ${props => props.theme.colors.lightBlue};
+    border-top-width: 5px;
+    border-bottom-width: 5px;
   }
   .gatsby-image-wrapper:hover {
-    transform:scale(1.1);
+    transform: scale(1.1);
     z-index: 10;
     border: 5px solid ${props => props.theme.colors.lightBlue};
   }
-  .gatsby-image-wrapper:first-child {
-    border-left: 5px solid ${props => props.theme.colors.lightBlue};
+  div:first-of-type .gatsby-image-wrapper {
+    border-left-width: 5px;
   }
-  .gatsby-image-wrapper:last-child {
-    border-right: 5px solid ${props => props.theme.colors.lightBlue};
+  div:last-of-type .gatsby-image-wrapper {
+    border-right-width: 5px;
   }
-  @media (max-width: 1000px) {
-    margin-left: 0;
-    justify-content: center;
+
+  @media (max-width: 835px) {
+    div:last-of-type .gatsby-image-wrapper {
+      border-top-width: 2.5px;
+    }
   }
+
   @media (max-width: 750px) {
     .gatsby-image-wrapper {
       border: 2.5px solid ${props => props.theme.colors.lightBlue};
-      border-top: 5px solid ${props => props.theme.colors.lightBlue};
-      border-bottom: 2.5px solid ${props => props.theme.colors.lightBlue};
+      border-top-width: 5px;
+      border-bottom-width: 2.5px;
     }
-    .gatsby-image-wrapper:last-child {
-      border-top: 2.5px solid ${props => props.theme.colors.lightBlue};
-      border-right: 5px solid ${props => props.theme.colors.lightBlue};
-      border-left: 5px solid ${props => props.theme.colors.lightBlue};
-      border-bottom: 5px solid ${props => props.theme.colors.lightBlue};
+    div:last-of-type .gatsby-image-wrapper {
+      border-top-width: 2.5;
+      border-right-width: 5px;
+      border-left-width: 5px;
+      border-bottom-width: 5px;
     }
-    .gatsby-image-wrapper:nth-child(3) {
-      border-right: 5px solid ${props => props.theme.colors.lightBlue};
+    div:nth-of-type(3) .gatsby-image-wrapper {
+      border-right-width: 5px;
     }
   }
-  @media (max-width: 600px) {
+
+  @media (max-width: 670px) and (min-width: 393px) {
+    div:nth-of-type(odd) .gatsby-image-wrapper {
+      border-right-width: 2.5px;
+      border-left-width: 5px;
+    }
+    div:nth-of-type(even) .gatsby-image-wrapper {
+      border-left-width: 2.5px;
+      border-right-width: 5px;
+    }
+    div:nth-of-type(-n + 2) .gatsby-image-wrapper {
+      border-top-width: 5px;
+      border-bottom-width: 5px;
+    }
+    div:nth-last-of-type(-n + 2) .gatsby-image-wrapper {
+      border-top-width: 2.5px;
+      border-bottom-width: 5px;
+    }
+  }
+  @media (max-width: 392px) {
     .gatsby-image-wrapper {
-      border: 2.5px solid ${props => props.theme.colors.lightBlue};
-      border-top: 5px solid ${props => props.theme.colors.lightBlue};
-      border-bottom: 2.5px solid ${props => props.theme.colors.lightBlue};
+      border-left-width: 5px;
+      border-right-width: 5px;
+      border-top-width: 2.5px;
+      border-bottom-width: 2.5px;
     }
-    .gatsby-image-wrapper:last-child {
-      border-top: 2.5px solid ${props => props.theme.colors.lightBlue};
-      border-right: 5px solid ${props => props.theme.colors.lightBlue};
-      border-left: 2.5px solid ${props => props.theme.colors.lightBlue};
-      border-bottom: 5px solid ${props => props.theme.colors.lightBlue};
+    div:last-of-type .gatsby-image-wrapper {
+      border-bottom-width: 5px;
     }
-    .gatsby-image-wrapper:nth-child(2) {
-      border-right: 5px solid ${props => props.theme.colors.lightBlue};
+    div:first-of-type .gatsby-image-wrapper {
+      border-top-width: 5px;
     }
-    .gatsby-image-wrapper:nth-child(3) {
-      border-top: 2.5px solid ${props => props.theme.colors.lightBlue};
-      border-right: 2.5px solid ${props => props.theme.colors.lightBlue};
-      border-left: 5px solid ${props => props.theme.colors.lightBlue};
-      border-bottom: 5px solid ${props => props.theme.colors.lightBlue};
-    }
-  }
-  @media (max-width: 435px) {
-   .gatsby-image-wrapper {
-      border-right: 5px solid ${props => props.theme.colors.lightBlue};
-      border-left: 5px solid ${props => props.theme.colors.lightBlue};
-      border-top: 2.5px solid ${props => props.theme.colors.lightBlue};
-      border-bottom: 2.5px solid ${props => props.theme.colors.lightBlue};
-    }
-    .gatsby-image-wrapper:first-child {
-      border-top: 5px solid ${props => props.theme.colors.lightBlue};
-    
-    }
-    .gatsby-image-wrapper:last-child {
-      border-bottom: 5px solid ${props => props.theme.colors.lightBlue};
-      border-left: 5px solid ${props => props.theme.colors.lightBlue};
-    
-    }
-    .gatsby-image-wrapper:nth-child(2) {
-      border-right: 5px solid ${props => props.theme.colors.lightBlue};
-    }
-    .gatsby-image-wrapper:nth-child(3) {
-      border-bottom: 2.5px solid ${props => props.theme.colors.lightBlue};
-      border-right: 5px solid ${props => props.theme.colors.lightBlue};
-      border-left: 5px solid ${props => props.theme.colors.lightBlue};
-    } */
   }
 `;
 
-const StyledFlexWrap = styled(Flex)`
-  flex-wrap: wrap;
-`;
 class TechAndServices extends Component {
   render() {
     return (

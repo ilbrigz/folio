@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Flex, Avatar, Heading, InlineFlex, styled } from "reakit";
 import { StaticQuery, graphql } from "gatsby";
-import Waypoint from "react-waypoint";
 
 const StyledWrapper = styled(Flex)`
   background: linear-gradient(

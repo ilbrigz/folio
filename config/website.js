@@ -4,10 +4,10 @@ module.exports = {
   siteTitleAlt: "Brayn Brigoli - Filipino Freelance Web Developer", // Alternative Site title for SEO
   siteUrl: "http://localhost:8000", // Domain of your site. No trailing slash!
   siteLanguage: "en", // Language Tag on <html> element
-  siteLogo: "/logos/logo-48.png", // Used for SEO and manifest
+  siteLogo: "/share.png", // Used for SEO and manifest
   siteDescription:
     "Building you fast, modern and secure website with React and Gatsby JS.",
-  author: "Brayn Brigooli", // Author for schemaORGJSONLD
+  author: "Brayn Brigoli", // Author for schemaORGJSONLD
   // siteFBAppID: '123456789', // Facebook App ID - Optional
   //   userTwitter: "@emma", // Twitter Username
   ogSiteName: "brayn", // Facebook Site Name

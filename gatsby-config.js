@@ -31,8 +31,8 @@ module.exports = {
         name: `Brayn Brigoli`,
         short_name: `BrigzDev`,
         start_url: `/`,
-        background_color: `#f7f0eb`,
-        theme_color: `#74aa8f`,
+        background_color: `#d4a782`,
+        theme_color: `#6cb4cc`,
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: `standalone`,

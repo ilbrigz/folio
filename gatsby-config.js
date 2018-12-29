@@ -28,8 +28,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `GatsbyJS`,
-        short_name: `GatsbyJS`,
+        name: `Brayn Brigoli`,
+        short_name: `BrigzDev`,
         start_url: `/`,
         background_color: `#f7f0eb`,
         theme_color: `#74aa8f`,

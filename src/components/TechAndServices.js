@@ -1,5 +1,13 @@
 import React, { Component } from "react";
-import { Flex, Avatar, Heading, InlineFlex, styled } from "reakit";
+import {
+  Flex,
+  Avatar,
+  Popover,
+  InlineBlock,
+  Heading,
+  InlineFlex,
+  styled
+} from "reakit";
 import { StaticQuery, graphql } from "gatsby";
 
 const StyledWrapper = styled(Flex)`
@@ -80,17 +88,40 @@ class PersonalProjects extends Component {
               render={data => (
                 <StyledFlexWrap justifyContent="center" marginTop="1rem">
                   {data.avatars.edges.map(item => (
-                    <Avatar
-                      border="1px solid white"
+                    <Popover.Container
                       key={item.node.childImageSharp.fixed.originalName}
-                      alt={item.node.childImageSharp.fixed.originalName
-                        .split(".")
-                        .slice(0, -1)
-                        .join(".")}
-                      src={item.node.childImageSharp.fixed.src}
-                      fontSize={40}
-                      margin=".5rem"
-                    />
+                    >
+                      {({ visible, show, hide }) => (
+                        <InlineBlock relative>
+                          <Avatar
+                            onMouseEnter={show}
+                            onMouseLeave={hide}
+                            border="1px solid white"
+                            alt={item.node.childImageSharp.fixed.originalName
+                              .split(".")
+                              .slice(0, -1)
+                              .join(".")}
+                            src={item.node.childImageSharp.fixed.src}
+                            fontSize={40}
+                            margin=".5rem"
+                          />
+                          <Popover
+                            fade
+                            slide
+                            expand
+                            hideOnClickOutside
+                            visible={visible}
+                          >
+                            <Popover.Arrow />
+
+                            {item.node.childImageSharp.fixed.originalName
+                              .split(".")
+                              .slice(0, -1)
+                              .join(".")}
+                          </Popover>
+                        </InlineBlock>
+                      )}
+                    </Popover.Container>
                   ))}
                 </StyledFlexWrap>
               )}

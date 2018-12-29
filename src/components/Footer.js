@@ -27,7 +27,7 @@ const StyledDiv = styled.footer`
     margin-top: 0.5rem;
     font-size: 0.9rem;
   }
-  svg:last-child {
+  a:last-child {
     margin-right: 0;
   }
 `;

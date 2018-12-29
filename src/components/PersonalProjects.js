@@ -167,8 +167,18 @@ class TechAndServices extends Component {
               Personal Projects
             </Heading>
             <p>
-              These websites were made for the purpose of learning the basics.
-              They are not in production.
+              These websites were made by following courses in{" "}
+              <a
+                style={{
+                  color: "white",
+                  textShadow: "none"
+                }}
+                href="http://www.udemy.com"
+              >
+                Udemy
+              </a>{" "}
+              for the purpose of learning the basics. They are not in
+              production.
             </p>
           </StyledLeftContainer>
 

@@ -319,7 +319,7 @@ class ClientProjects extends Component {
             {" "}
             <Heading as="h3" fontSize="1rem">
               {" "}
-              Cliet's Project
+              Client's Project
             </Heading>
             <p>Let's work together and build an awesome website.</p>
           </StyledRightContainer>

@@ -1,5 +1,5 @@
 import React from "react";
-import { styled, Input, Flex } from "reakit";
+import { styled, Input, Button, Flex } from "reakit";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMobileAlt,
@@ -92,6 +92,7 @@ const NameEmailContainer = styled(Flex)`
     input {
       width: 100%;
     }
+
     div:first-child {
       margin-right: 0;
     }
@@ -159,7 +160,7 @@ export default function Contact() {
               <textarea type="text" name="message" />
             </Flex>
 
-            <input type="submit" value="Send Message" />
+            <Button type="submit"> Send Message</Button>
           </form>
         </LeftContainer>
         <RightContainer>

@@ -75,7 +75,6 @@ const SEO = props => {
     <Helmet>
       <html lang={config.siteLanguage} />
       <title>{title}</title>
-      <link rel="icon" href={image} />
       <meta name="description" content={description} />
       <meta name="image" content={image} />
       <script type="application/ld+json">

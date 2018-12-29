@@ -6,7 +6,7 @@ const pathPrefix = config.pathPrefix === "/" ? "" : config.pathPrefix;
 module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
-    siteUrl: `www.brigzdev.com`
+    siteUrl: `https://www.brigzdev.com`
   },
   plugins: [
     `gatsby-plugin-sitemap`,

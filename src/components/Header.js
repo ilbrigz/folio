@@ -120,7 +120,7 @@ class Header extends Component {
         <InlineFlex padding="1rem">
           <Button>
             <Link
-              to="/blog"
+              to="/blogs"
               style={{
                 textDecoration: "none",
                 backgroundImage: "none",

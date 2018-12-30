@@ -38,7 +38,7 @@ export default function AboutMe() {
 
         <Button>
           <Link
-            to="/blog"
+            to="/blogs"
             style={{
               textDecoration: "none",
               backgroundImage: "none",

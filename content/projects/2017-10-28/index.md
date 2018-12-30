@@ -4,7 +4,9 @@ title: "LekoArts - Your theme creator!"
 cover: "./lekoarts.jpg"
 date: "2017-10-28"
 service: "Theme"
+pinned: "1"
 ---
+
 ## Description
 
 Hi!

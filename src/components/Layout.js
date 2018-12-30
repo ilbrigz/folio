@@ -13,6 +13,7 @@ injectGlobal`
 
 const StyledApp = styled(Box)`
   color: ${props => props.theme.colors.white};
+  background-color: #e5ecf2;
 `;
 
 const theme = {
@@ -33,7 +34,7 @@ const theme = {
 
 const Layout = props => (
   <Provider theme={theme}>
-    <StyledApp height="100vh" width="100vw">
+    <StyledApp width="100vw">
       <SEO />
       {props.children}
     </StyledApp>

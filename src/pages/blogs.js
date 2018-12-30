@@ -3,6 +3,12 @@ import { Flex, Box, styled } from "reakit";
 import { graphql, Link } from "gatsby";
 import PropTypes from "prop-types";
 import Img from "gatsby-image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faMobileAlt,
+  faHome,
+  faEnvelope
+} from "@fortawesome/free-solid-svg-icons";
 
 import Layout from "../components/Layout";
 import Header from "../components/Header";
@@ -10,7 +16,7 @@ import Footer from "../components/Footer";
 
 const OuterWrapper = styled(Flex)`
   max-width: 1200px;
-  padding: 0 2rem;
+  padding: 2rem;
   background-color: #e5ecf2;
   margin: 0 auto;
   h1,
@@ -31,31 +37,81 @@ const OuterWrapper = styled(Flex)`
 `;
 
 const BlogWrapper = styled(Flex)`
-  margin: 1rem auto;
+  margin: 0 auto;
   min-width: 70%;
-  margin-right: 5%;
+  margin-right: 2rem;
   background-color: #e5ecf2;
   flex-direction: column;
   @media (max-width: 900px) {
     min-width: 60%;
   }
-`;
-const SideBarWrapper = styled(Flex)`
-  margin: 1rem auto;
-  min-width: 25%;
-  background-color: orange;
-  flex-direction: column;
-  @media (max-width: 900px) {
-    min-width: 35%;
+  @media (max-width: 600px) {
+    width: 100%;
+    margin-right: 0;
   }
 `;
 const BlogContainer = styled(Box)`
   padding: 1rem 2rem;
   background-color: white;
   box-shadow: 0 -1px 1px 1px rgba(0, 0, 0, 0.15);
-  margin: 1rem;
+  margin-bottom: 2rem;
   .gatsby-image-wrapper {
     margin: 0 auto;
+  }
+  &:last-child {
+    margin-bottom: 2rem;
+  }
+`;
+
+const SideBarWrapper = styled(Flex)`
+  flex-grow: 1;
+  min-width: 25%;
+  flex-direction: column;
+  @media (max-width: 900px) {
+    min-width: 35%;
+  }
+`;
+const SideContact = styled(Flex)`
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: white;
+  height: inherit;
+  padding: 1rem 2rem;
+  align-items: center;
+  box-shadow: 0 -1px 1px 1px rgba(0, 0, 0, 0.15);
+`;
+const NameEmailContainer = styled(Flex)`
+  div {
+    flex-grow: 1;
+  }
+
+    div:first-child {
+      margin-right: 0;
+    }
+  }
+`;
+const InformationGroup = styled(Flex)`
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 60%;
+
+  margin: 1rem;
+`;
+const InfoDetails = styled(Flex)`
+  flex-direction: column;
+  align-items: center;
+  path {
+    fill: black;
+  }
+  h3 {
+    margin-top: 0;
+    font-size: 1rem;
+    margin: 0.4rem;
+  }
+  p {
+    font-size: 0.8rem;
   }
 `;
 
@@ -93,7 +149,46 @@ const Blogs = ({
           );
         })}
       </BlogWrapper>
-      <SideBarWrapper>side</SideBarWrapper>
+      <SideBarWrapper>
+        {" "}
+        <SideContact>
+          <InformationGroup>
+            {" "}
+            <FontAwesomeIcon
+              size="lg"
+              style={{ width: "2rem", color: "black" }}
+              icon={faMobileAlt}
+            />
+            <InfoDetails>
+              <h3>Mobile</h3>
+              <p>09098247797</p>
+            </InfoDetails>
+          </InformationGroup>
+
+          <InformationGroup>
+            <FontAwesomeIcon
+              style={{ width: "2rem", color: "black" }}
+              size="lg"
+              icon={faHome}
+            />
+            <InfoDetails>
+              <h3>Email</h3>
+              <p>ilogirb23@yahoo.com</p>
+            </InfoDetails>
+          </InformationGroup>
+          <InformationGroup>
+            <FontAwesomeIcon
+              style={{ width: "2rem", color: "black" }}
+              size="lg"
+              icon={faEnvelope}
+            />
+            <InfoDetails>
+              <h3>Address</h3>
+              <p>Cebu, Philippines</p>
+            </InfoDetails>
+          </InformationGroup>
+        </SideContact>
+      </SideBarWrapper>
     </OuterWrapper>
     <Footer />
   </Layout>

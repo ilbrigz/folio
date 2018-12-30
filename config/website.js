@@ -4,7 +4,7 @@ module.exports = {
   siteTitleAlt: "Brayn Brigoli - Filipino Freelance Web Developer", // Alternative Site title for SEO
   siteUrl: "https://www.brigzdev.com", // Domain of your site. No trailing slash!
   siteLanguage: "en", // Language Tag on <html> element
-  siteLogo: "/share.png", // Used for SEO and manifest
+  siteLogo: "/share-image.png", // Used for SEO and manifest
   siteDescription:
     "Building you fast, modern and secure website with React and Gatsby JS.",
   author: "Brayn Brigoli", // Author for schemaORGJSONLD

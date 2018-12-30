@@ -148,7 +148,7 @@ class Hero extends React.Component {
                       I build beautiful{" "}
                       <LightOrangeSpan>modern websites</LightOrangeSpan> that
                       <LightBlueSpan> speed</LightBlueSpan> past the
-                      competitions.
+                      competition.
                     </Heading>
                   </Hidden>
                 </>

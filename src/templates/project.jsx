@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { styled } from "reakit";
 import { graphql } from "gatsby";
+import { Flex, Box, styled } from "reakit";
 import Helmet from "react-helmet";
 import SEO from "../components/SEO";
 import config from "../../config/website";
@@ -9,18 +9,40 @@ import Header from "../components/Header";
 import Layout from "../components/Layout";
 import Footer from "../components/Footer";
 
-const InformationWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-`;
-
-const InfoBlock = styled.div`
-  display: flex;
+const OuterWrapper = styled(Flex)`
   flex-direction: column;
+  max-width: 1200px;
+  padding: 2rem;
+  background-color: #e5ecf2;
+  margin: 0 auto;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  span,
+  p,
+  a,
+  li {
+    margin: 0;
+    color: black;
+  }
 `;
 
+const BlogWrapper = styled(Flex)`
+  margin: 0 auto;
+  width: 100%;
+  margin-right: 2rem;
+  background-color: #e5ecf2;
+  flex-direction: column;
+  @media (max-width: 900px) {
+    min-width: 60%;
+  }
+  @media (max-width: 600px) {
+    width: 100%;
+    margin-right: 0;
+  }
+`;
 const Top = styled.div`
   font-size: 80%;
   margin-bottom: 0.5rem;
@@ -40,29 +62,22 @@ const Project = ({
   return (
     <Layout>
       <Header />
-      <Helmet title={`${project.title} | ${config.siteTitle}`} />
-      <SEO postPath={slug} postNode={postNode} postSEO />
-      <h1 style={{ color: "red" }}>{project.title}</h1>
-      <InformationWrapper>
-        <InfoBlock>
-          <Top>Client</Top>
-          <Bottom>{project.client}</Bottom>
-        </InfoBlock>
-        <InfoBlock>
-          <Top>Date</Top>
-          <Bottom>{project.date}</Bottom>
-        </InfoBlock>
-        <InfoBlock>
-          <Top>Service</Top>
-          <Bottom>{project.service}</Bottom>
-        </InfoBlock>
-      </InformationWrapper>
-      <div>
-        <div
-          style={{ color: "green" }}
-          dangerouslySetInnerHTML={{ __html: postNode.html }}
-        />
-      </div>
+      <OuterWrapper>
+        <Helmet title={`${project.title} | ${config.siteTitle}`} />
+        <SEO postPath={slug} postNode={postNode} postSEO />
+        <h1>{project.title}</h1>
+        <div>
+          <p>Date</p>
+          <p>{project.date}</p>
+        </div>
+        <br />
+        <div>
+          <div
+            style={{ color: "green" }}
+            dangerouslySetInnerHTML={{ __html: postNode.html }}
+          />
+        </div>
+      </OuterWrapper>
       <Footer style={{ positionn: "sticky" }} />
     </Layout>
   );

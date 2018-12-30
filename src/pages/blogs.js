@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Flex, Box, styled } from "reakit";
 import { graphql, Link } from "gatsby";
 import PropTypes from "prop-types";
@@ -131,7 +131,9 @@ const Blogs = ({
                 <div>
                   <div>
                     <h3>{project.node.frontmatter.title}</h3>
-                    <p>{project.node.frontmatter.date}</p>
+                    <p style={{ fontSize: ".8rem" }}>
+                      {project.node.frontmatter.date}
+                    </p>
                     {project.node.frontmatter.cover && (
                       <Img
                         style={{ maxWidth: "400px", maxHeight: "200px" }}
@@ -142,7 +144,9 @@ const Blogs = ({
                     )}
                   </div>
 
-                  <p>{project.node.excerpt.replace("Description ", "")}</p>
+                  <p style={{ fontSize: ".9rem", marginTop: ".5rem" }}>
+                    {project.node.excerpt.replace("Description ", "")}
+                  </p>
                 </div>{" "}
               </Link>
             </BlogContainer>

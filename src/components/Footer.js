@@ -16,6 +16,7 @@ const StyledDiv = styled.footer`
   flex-direction: column;
   justify-items: center;
   padding: 2rem 2rem;
+  margin-top: auto;
   a {
     text-decoration: none;
     color: white;

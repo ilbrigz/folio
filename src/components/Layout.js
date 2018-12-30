@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Provider, styled, injectGlobal } from "reakit";
+import { Flex, Provider, styled, injectGlobal } from "reakit";
 import defaultTheme from "reakit-theme-default";
 import SEO from "../components/SEO";
 
@@ -11,9 +11,11 @@ injectGlobal`
 }
 `;
 
-const StyledApp = styled(Box)`
+const StyledApp = styled(Flex)`
   color: ${props => props.theme.colors.white};
   background-color: #e5ecf2;
+  min-height: 100vh;
+  flex-direction: column;
 `;
 
 const theme = {

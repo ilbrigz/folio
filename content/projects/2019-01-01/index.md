@@ -2,6 +2,7 @@
 client: "LekoArts"
 title: "Look Back and Forsee"
 date: "2019-01-01"
+cover: "./determination.jpg"
 service: "Theme"
 pinned: "1"
 ---

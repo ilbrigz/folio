@@ -40,7 +40,7 @@ export default function AboutMe() {
           >
             Gatsbyjs
           </a>
-          . With this technogy I make your site load faster than ever and thus
+          . With this technology I make your site load faster than ever and thus
           bringing more traffic.
         </p>
 

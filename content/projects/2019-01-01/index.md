@@ -1,6 +1,6 @@
 ---
 client: "LekoArts"
-title: "Look Back and Forsee"
+title: "Look Back and Foresee"
 date: "2019-01-01"
 cover: "./determination.jpg"
 service: "Theme"
@@ -21,7 +21,7 @@ pinned: "1"
     * Mongodb
     * Postgresql
     * Graphql
-    * Fecth
+    * Fetch
     * Google Maps
     * Meta tags
     * Postgress

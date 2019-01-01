@@ -36,7 +36,7 @@ export default function AboutMe() {
               color: "white",
               textShadow: "none"
             }}
-            href="whttps://www.gatsbyjs.org/"
+            href="https://www.gatsbyjs.org/"
           >
             Gatsbyjs
           </a>

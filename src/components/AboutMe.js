@@ -27,11 +27,13 @@ export default function AboutMe() {
         <h3>About me</h3>
         <br />
         <p>
-          Hi! I am Brayn. I am a self-taught programmer. I first tried coding
-          two years ago. Since then, I fell in love and I have been learning and
-          teaching myself how to code. I have known photoshop, drawing and
-          design before that. I am a self-motivated person and I am always
-          willing to learn new things.
+          Hi! I am Brayn Brigoli. I am a self-taught Filipino programmer
+          currently living in Cebu, Philippines. I am skilled freelance web
+          developer. My stack includes but are not limited to html, css,
+          javascript, react, nodejs, mongodb, and sql. I am currently into the
+          framework called <a href="whttps://www.gatsbyjs.org/">Gatsbyjs</a>.
+          With this technogy I make your site load faster than ever and thus
+          bringing more traffic to your site.
         </p>
 
         <p>To know more about me, please check out my blog page.</p>

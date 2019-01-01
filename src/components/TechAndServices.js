@@ -154,9 +154,7 @@ class PersonalProjects extends Component {
                   contents there.
                 </p>
               </li>
-              <li>
-                <p>Desing/Redesign of your portofio/website. </p>
-              </li>
+  
             </ol>
           </StyledRightContainer>
         </StyledContentWrapper>

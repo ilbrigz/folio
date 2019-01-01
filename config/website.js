@@ -6,7 +6,7 @@ module.exports = {
   siteLanguage: "en", // Language Tag on <html> element
   siteLogo: "/share-image.png", // Used for SEO and manifest
   siteDescription:
-    "Building you fast, modern and secure website with React and Gatsby JS.",
+    "Brayn Brigoli is a Filipino Freelance Web Developer that builds fast, modern and secure website with React and Gatsby JS.",
   author: "Brayn Brigoli", // Author for schemaORGJSONLD
   // siteFBAppID: '123456789', // Facebook App ID - Optional
   //   userTwitter: "@emma", // Twitter Username

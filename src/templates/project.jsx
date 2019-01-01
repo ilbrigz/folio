@@ -65,10 +65,11 @@ const Project = ({
       <OuterWrapper>
         <Helmet title={`${project.title} | ${config.siteTitle}`} />
         <SEO postPath={slug} postNode={postNode} postSEO />
-        <h1>{project.title}</h1>
-        <div>
-          <p>Date</p>
-          <p>{project.date}</p>
+        <div style={{ textAlign: "center"}}>
+          <h1>{project.title}</h1>
+          <div>
+            <p>{project.date}</p>
+          </div>
         </div>
         <br />
         <div>

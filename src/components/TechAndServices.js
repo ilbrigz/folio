@@ -135,7 +135,17 @@ class PersonalProjects extends Component {
             </Heading>
             <ol>
               <li>
-                <p>Build responsive websites with react.</p>
+                <p>Build responsive websites with React.</p>
+              </li>
+              <li>
+                <p>Desing/Redesign of your portofio/blog page. </p>
+              </li>
+              <li>
+                <p>
+                  Your site will be SEO ready. Potential customer will have no
+                  trouble finding you in search enginges such as Google and
+                  Bing.
+                </p>
               </li>
               <li>
                 <p>
@@ -146,12 +156,6 @@ class PersonalProjects extends Component {
               </li>
               <li>
                 <p>Desing/Redesign of your portofio/website. </p>
-              </li>
-              <li>
-                <p>
-                  I also teach beginners the basics of Web Development and
-                  Photoshop.{" "}
-                </p>
               </li>
             </ol>
           </StyledRightContainer>

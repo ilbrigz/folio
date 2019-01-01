@@ -154,7 +154,6 @@ class PersonalProjects extends Component {
                   contents there.
                 </p>
               </li>
-  
             </ol>
           </StyledRightContainer>
         </StyledContentWrapper>

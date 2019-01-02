@@ -109,6 +109,7 @@ const SEO = props => {
       <meta name="twitter:url" content={config.siteUrl} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
+      <meta name="google-site-verification" content="Y8nEz9yqTGPx-Lio2pknJUSUoFIKQE1oNhVKR2p_Eso" />
     </Helmet>
   );
 };

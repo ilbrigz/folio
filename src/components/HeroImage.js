@@ -20,6 +20,8 @@ const HeroImage = props => (
         <Img
           style={{ borderRadius: "5px 5px 0 0" }}
           fluid={data.file.childImageSharp.fluid}
+          alt="Brayn Brigoli"
+          title="Brayn Brigoli Filipino Web Developer"
         />
       );
     }}

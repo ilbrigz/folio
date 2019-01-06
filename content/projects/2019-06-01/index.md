@@ -19,9 +19,12 @@ pinned: "1"
 
 _Learning is fun. Gotta keep going._
 
-### Plans
+<br>
+<br>
 
-[![with-higher-level-api](https://brigzdev.com/react-api.png)](https://k2592yj8rr.codesandbox.io/)
+### What I built this week. It's I small victory. But still a victory nevertheless.
+
+[![with-higher-level-api](https://brigzdev.com/react-api.png)](https://codesandbox.io/s/k2592yj8rr)
 
 <br>
 <br>
@@ -32,4 +35,4 @@ _Learning is fun. Gotta keep going._
 2. Start a course on wordpress. So at least I know the basics.
 3. Add netlifycms to this website.
 
-_This list will be altered and updated monthly. Wish me luck!_
+_This list will be altered and updated weekly. Wish me luck!_

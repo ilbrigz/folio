@@ -65,7 +65,7 @@ const Project = ({
       <OuterWrapper>
         <Helmet title={`${project.title} | ${config.siteTitle}`} />
         <SEO postPath={slug} postNode={postNode} postSEO />
-        <div style={{ textAlign: "center"}}>
+        <div style={{ textAlign: "center" }}>
           <h1>{project.title}</h1>
           <div>
             <p>{project.date}</p>
@@ -104,7 +104,6 @@ export const pageQuery = graphql`
         title
         date(formatString: "DD.MM.YYYY")
         client
-        service
         cover {
           childImageSharp {
             resize(width: 800) {

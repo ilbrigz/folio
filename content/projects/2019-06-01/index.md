@@ -21,7 +21,7 @@ _Learning is fun. Gotta keep going._
 
 ### Plans
 
-[![Foo](https://brigzdev.com/react-api.png)](https://k2592yj8rr.codesandbox.io/)
+[![with-higher-level-api](https://brigzdev.com/react-api.png)](https://k2592yj8rr.codesandbox.io/)
 
 <br>
 <br>
